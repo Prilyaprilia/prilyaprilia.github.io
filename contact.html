@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprilia Ardita XII RPL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo SMK Bina Informatika">
+                <h1>SMK Bina Informatika</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>Jl. RE Abdullah No. 15 pasir jaya, bogor barat, kota bogor </p>
+                    <p><i class="fas fa-phone"></i> 0251 8366 732</p>
+                    <p><i class="fas fa-envelope"></i> smkbinainfirmatika@gmail.com</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); handleContactForm();">
+                    <h3>Kirim Pesan</h3>
+                    <input type="text" id="contact-name" placeholder="Nama Anda" required>
+                    <input type="email" id="contact-email" placeholder="Email Anda" required>
+                    <textarea id="contact-message" placeholder="Pesan Anda" rows="5" required></textarea>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SMK Bina Informatika.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fungsi untuk menangani form kontak
+        function handleContactForm() {
+            const isLoggedIn = localStorage.getItem('loggedIn');
+
+            if (!isLoggedIn) {
+                alert('Anda harus login terlebih dahulu untuk mengirim pesan.');
+                window.location.href = 'login.html';
+            } else {
+                alert('Pesan Anda telah terkirim!');
+                document.getElementById('contact-name').value = '';
+                document.getElementById('contact-email').value = '';
+                document.getElementById('contact-message').value = '';
+            }
+        }
+    </script>
+</body>
+</html>

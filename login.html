@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Kirana XII RPL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo SMK Bina Informatika">
+                <h1>SMK Bina Informatika</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="login-form">
+        <h2>Login</h2>
+        <form onsubmit="event.preventDefault(); login();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Belum punya akun? <a href="register.html">Daftar di sini</a>.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SMK Bina Informatika.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
